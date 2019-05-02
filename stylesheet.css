@@ -53,9 +53,13 @@ p{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.botones input{
-	border: none;
+.btn{
+	font-size: 444px;
+}
+#botones input{
+	margin-top: 20px;
 	color: rgb(0,136,84);
+	border: none;
 	font-size: 20px;
 	background-color: white;
 	padding: 5px 20px;
@@ -72,6 +76,15 @@ ul{
 	font-family: MagistralC;
 	font-size: 20px;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.cont_prin input[type="number"]{
+	padding-right: 30px;
+	padding-left: 30px;
+}
 .result p{
 	color: black;
 	padding: 0px;
@@ -80,6 +93,7 @@ ul{
 	padding-bottom: 10px;
 	margin-bottom: 15px;
 }
+
 .result .cont_prin .total{
 	font-size: 40px;
 }

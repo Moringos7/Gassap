@@ -8,9 +8,9 @@
 
   $Array = imprimir("http://www.gasolinamx.com/estado/jalisco/guadalajara","table.table.table-bordered.col-md-8 tbody tr td");
   if(strcmp("M", $gas) == 0){
-  	$precioGas = (String) $Array[1];
+  	$precioGas = (float) substr($Array[1], 4,8);
   }elseif (strcmp("P", $gas) == 0) {
-  	$precioGas = (String) $Array[3];
+  	$precioGas = (float) substr($Array[3], 4,8);
   } 
   if(strcmp("4", $cilindraje) == 0){
   	$km_l = 13;
@@ -20,14 +20,14 @@
 
   }
   if(strcmp("ciudad", $camino) == 0){
-  	$km_l;
+  	$km_l = $km_l;
   }elseif (strcmp("carretera", $camino) == 0) {
   	$km_l += 4; 
   }else{
-
+  	$km_l = $km_l;
   }  
   $lts_requeridos = round($km/$km_l,2); 
-  $precioTotal = $lts_requeridos * (float)$precioGas;
+  $precioTotal = round($lts_requeridos * $precioGas,2);
   //echo $km."-".$color."-".$gas."-".$cilindraje."-".$camino;
 ?>
 <!DOCTYPE html>
@@ -38,12 +38,12 @@
 	<meta name="keywords" content="">
   	<meta charset="utf-8">
 </head>
-<body>
+<body id="body">
 	<h1>GASAPP</h1>
-	<P>"Lorem Ipsum"</P>
+	<P>"Lo suficiente para disfurtar"</P>
 	<div class="result">
 		<div class="cont_prin">
-			<ul>
+			<ul id="lista">
 				<li>Distancia:</li>
 				<p><?php echo $km; ?> Km</p>
 				<li>Litros Requeridos:</li>
@@ -55,7 +55,12 @@
 			</ul>
 		</div>
 	</div>
-	<a href="index.html">Regresar</a>
-	<script type="text/javascript" src="javascript.js">	</script>
+	<a id="regresar" href="index.html">Regresar</a>
+	<script type="text/javascript">
+		document.getElementById("body").style.background = <?php echo "\"".$color."\"";?>;
+		document.getElementById("lista").style.color = <?php echo "\"".$color."\"";?>;
+		document.getElementById("regresar").style.color = <?php echo "\"".$color."\"";?>;
+
+	</script>
 </body>
 </html>

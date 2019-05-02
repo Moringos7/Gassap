@@ -6,33 +6,33 @@
 	<meta name="keywords" content="">
   	<meta charset="utf-8">
 </head>
-<body>
+<body id="body">
 	<h1>GASAPP</h1>
-	<P>"Lorem Ipsum"</P>
+	<P>"Lo suficiente para disfurtar"</P>
 	<form name="form" method="post" action="resul.php" class="formulario">
 		<div class="cont_prin">
 			<h3 class="espace">Ingrese el numero de KM </h3>
-			<input type="text" name="km">
-			<input type="hidden" name= "color" value="verde">
+			<input type="number" name="km" min="1" max="500" required="required">
+			<input id="color" type="hidden" name= "color" value="#008854">
 			<h4><b>Gasolina</b></h4>
-			Magna <input onclick="cambioVerde()" type="radio" name="gasolina" value="M"> 
+			Magna <input onclick="cambioVerde()" type="radio" name="gasolina" value="M"  checked="checked"> 
 			Premium <input onclick="cambioRojo()" type="radio" name="gasolina" value="P">
 			<h4>Cilindraje</h4>
-			<select class="select" name="cilindros">
-				<option value="" ></option>
+			<select class="select" name="cilindros" required="required">
 				<option value="4">4</option>
 				<option value="6">6</option>
 			</select>
 			<h4 class="espace">Tipo de Camino</h4>
-			Ciudad <input type="radio" name="camino" value="ciudad">
+			Ciudad <input type="radio" name="camino" value="ciudad" checked="checked">
 			Carretera <input type="radio" name="camino"value="carretera">
 			Ambos <input type="radio" name="camino" value="ambos">
 			</div>
-		<div class="botones">
-			<input class="btn" type="submit" name="Calcular" value="Calcular">
-			<input class="btn" type="reset" name="Limpiar" value="Limpiar">	
+		<div id="botones">
+			<input id ="btn1" type="submit" name="Calcular" value="Calcular">
+			<input id = "btn2" type="reset" name="Limpiar" value="Limpiar" onclick="cambioVerde()">	
 		</div>
 	</form>
-	<script type="text/javascript" src="javascript.js">	</script>
+	<script type="text/javascript" src="javascript.js"></script>
 </body>
+
 </html>

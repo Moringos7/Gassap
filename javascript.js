@@ -1,14 +1,12 @@
-
-function cambioVerde(){
-	document.body.style.backgroudColor = "green";
+function cambioVerde() {
+	document.getElementById("body").style.background = "#008854";
+	document.getElementById("btn1").style.color = "#008854";
+	document.getElementById("btn2").style.color = "#008854";
+	document.getElementById("color").value = "#008854";
 }
-function cambioRojo(){
-	document.body.style.backgroudColor = "red";
+function cambioRojo() {
+	document.getElementById("body").style.background = "#E31836";
+	document.getElementById("btn1").style.color = "#E31836";
+	document.getElementById("btn2").style.color = "#E31836";
+	document.getElementById("color").value = "#E31836";s
 }
-/*
-var enlace = document.getElementById("magna");
- 
-enlace.addEventListener("click", function(e){
-  e.preventDefault();
-  document.body.style.backgroudColor = "red";
-}, false);*/
