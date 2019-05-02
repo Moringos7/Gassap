@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gassap</title>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+	<meta name="keywords" content="">
+  	<meta charset="utf-8">
+</head>
+<body>
+	<h1>GASAPP</h1>
+	<P>"Lorem Ipsum"</P>
+	<form name="form" method="post" action="resul.php" class="formulario">
+		<div class="cont_prin">
+			<h3 class="espace">Ingrese el numero de KM </h3>
+			<input type="text" name="km">
+			<input type="hidden" name= "color" value="verde">
+			<h4><b>Gasolina</b></h4>
+			Magna <input onclick="cambioVerde()" type="radio" name="gasolina" value="M"> 
+			Premium <input onclick="cambioRojo()" type="radio" name="gasolina" value="P">
+			<h4>Cilindraje</h4>
+			<select class="select" name="cilindros">
+				<option value="" ></option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</select>
+			<h4 class="espace">Tipo de Camino</h4>
+			Ciudad <input type="radio" name="camino" value="ciudad">
+			Carretera <input type="radio" name="camino"value="carretera">
+			Ambos <input type="radio" name="camino" value="ambos">
+			</div>
+		<div class="botones">
+			<input class="btn" type="submit" name="Calcular" value="Calcular">
+			<input class="btn" type="reset" name="Limpiar" value="Limpiar">	
+		</div>
+	</form>
+	<script type="text/javascript" src="javascript.js">	</script>
+</body>
+</html>
